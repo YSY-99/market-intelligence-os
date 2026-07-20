@@ -1,7 +1,7 @@
 """Optional Model Context Protocol adapter for the read-only catalog facade."""
 
 import sys
-from typing import Any, Callable, Dict, Optional
+from typing import Any, Callable, Optional
 
 from .catalog import Catalog
 
@@ -37,22 +37,22 @@ def create_mcp_server(
     )
 
     @server.tool()
-    def search_sources(query: str, limit: int = 5, free_only: bool = False) -> Dict[str, Any]:
+    def search_sources(query: str, limit: int = 5, free_only: bool = False) -> dict[str, Any]:
         """Recommend and explain the best catalog sources for a research question."""
         return catalog.search(query, limit=limit, free_only=free_only)
 
     @server.tool()
-    def get_source(source_id: str) -> Dict[str, Any]:
+    def get_source(source_id: str) -> dict[str, Any]:
         """Return one complete source record by its stable catalog identifier."""
         return catalog.get_source(source_id)
 
     @server.tool()
-    def list_intents() -> Dict[str, Any]:
+    def list_intents() -> dict[str, Any]:
         """List research intents, topics, decisions, and query vocabulary understood by the router."""
         return catalog.list_intents()
 
     @server.tool()
-    def get_coverage() -> Dict[str, Any]:
+    def get_coverage() -> dict[str, Any]:
         """Summarize catalog coverage and expose gaps by category, geography, access, and status."""
         return catalog.get_coverage()
 
