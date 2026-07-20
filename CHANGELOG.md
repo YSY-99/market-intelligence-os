@@ -4,6 +4,8 @@ All notable changes will be recorded here. The project follows semantic versioni
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-07-20
+
 - Read-only MCP server with source search, lookup, intent discovery, and coverage tools.
 - Shared dependency-free catalog facade, input limits, response schemas, and MCP tests.
 - Complete implementation and acceptance plan for the evidence-first research platform.
