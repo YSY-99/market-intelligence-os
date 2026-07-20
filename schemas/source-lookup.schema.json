@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:market-intelligence-os:schema:source-lookup:0.1",
+  "title": "Source Lookup Response",
+  "type": "object",
+  "required": ["api_version", "source_id", "found", "source"],
+  "properties": {
+    "api_version": {"const": "0.1"},
+    "source_id": {"type": "string", "minLength": 1},
+    "found": {"type": "boolean"},
+    "source": {"anyOf": [{"$ref": "source.schema.json"}, {"type": "null"}]}
+  },
+  "additionalProperties": false
+}

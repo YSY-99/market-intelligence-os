@@ -4,7 +4,9 @@ All notable changes will be recorded here. The project follows semantic versioni
 
 ## [Unreleased]
 
-- Public repository packaging, CI, governance, security policy, schemas, and examples.
+- Read-only MCP server with source search, lookup, intent discovery, and coverage tools.
+- Shared dependency-free catalog facade, input limits, response schemas, and MCP tests.
+- Complete implementation and acceptance plan for the evidence-first research platform.
 
 ## [0.1.0] - 2026-07-20
 

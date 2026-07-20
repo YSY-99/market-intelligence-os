@@ -2,7 +2,7 @@
 
 Market Intelligence OS is an open, explainable router for business research. Give it a market question or product idea, and it recommends the most relevant public and analytical sources, explains why they fit, and returns source links in human-readable or JSON form.
 
-Version `0.1` is the routing foundation. It helps people and AI agents decide **where to research**; it does not yet download third-party documents or generate a complete evidence-backed market report.
+Version `0.2` is the routing and MCP foundation. It helps people and AI agents decide **where to research**; it does not yet download third-party documents or generate a complete evidence-backed market report.
 
 ## What it provides
 
@@ -10,7 +10,7 @@ Version `0.1` is the routing foundation. It helps people and AI agents decide **
 - English and Russian query routing;
 - geography-aware recommendations and safe coverage gaps;
 - explainable scoring by intent, topic, decision type, authority proxy, and metadata;
-- installable CLI and public Python API;
+- installable CLI, public Python API, and read-only MCP server;
 - JSON and JSONL knowledge-base formats for AI agents;
 - community source submissions with editorial review and provenance controls;
 - reproducible builds, JSON Schemas, and CI for Python 3.9–3.13.
@@ -39,6 +39,15 @@ for result in response["results"]:
 ```
 
 See [the API guide](docs/api.md) and [the runnable example](examples/search_sources.py).
+
+Connect an AI client through MCP (Python 3.10+):
+
+```bash
+python -m pip install -e '.[mcp]'
+market-intel-mcp
+```
+
+See [the MCP guide](docs/mcp.md) for client configuration, available tools, and safety limits.
 
 ## Repository contents
 
@@ -100,7 +109,7 @@ Source provenance, geography, access restrictions, rights metadata, and reviewer
 
 Our next development sequence is:
 
-1. Read-only MCP tools for source search, inspection, intents, and coverage.
+1. Reproducible research workspaces and run manifests.
 2. A report/document registry with publication dates, provenance, and hashes.
 3. Safe HTML/PDF/API retrieval with licensing controls and citation-ready artifacts.
 4. Evidence extraction, source comparison, and claim-level citations.

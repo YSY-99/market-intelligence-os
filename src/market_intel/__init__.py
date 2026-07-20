@@ -2,16 +2,14 @@
 
 from typing import Iterable, List, Dict
 
-from .ingest import repository_file
-from .router import load_knowledge_base
-from .service import search_catalog
+from .catalog import Catalog, load_default_sources
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 
 def load_default_knowledge_base() -> List[Dict[str, object]]:
     """Load the repository or installed read-only source catalog."""
-    return load_knowledge_base(repository_file("data", "sources.json"))
+    return load_default_sources()
 
 
 def search_sources(
@@ -33,8 +31,7 @@ def search(
     free_only: bool = False,
 ) -> Dict[str, object]:
     """Return a versioned search response shared with the JSON CLI."""
-    catalog = list(sources) if sources is not None else load_default_knowledge_base()
-    return search_catalog(query, catalog, limit=limit, free_only=free_only)
+    return Catalog(sources).search(query, limit=limit, free_only=free_only)
 
 
-__all__ = ["__version__", "load_default_knowledge_base", "search", "search_sources"]
+__all__ = ["Catalog", "__version__", "load_default_knowledge_base", "search", "search_sources"]

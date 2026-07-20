@@ -12,6 +12,15 @@ def validate_json_schema(
     path: str = "$",
 ) -> None:
     """Validate the dependency-free JSON Schema subset used by public v0.1 contracts."""
+    if "anyOf" in schema:
+        errors = []
+        for option in schema["anyOf"]:
+            try:
+                validate_json_schema(value, option, base_dir, path)
+                return
+            except ValueError as error:
+                errors.append(str(error))
+        raise ValueError("{} does not match any allowed schema: {}".format(path, "; ".join(errors)))
     if "$ref" in schema:
         reference = schema["$ref"]
         if not isinstance(reference, str) or reference.startswith(("http:", "https:")):
@@ -33,8 +42,9 @@ def validate_json_schema(
         "boolean": isinstance(value, bool),
         "null": value is None,
     }
-    if expected_type and not type_matches.get(expected_type, False):
-        raise ValueError("{} must be {}".format(path, expected_type))
+    allowed_types = expected_type if isinstance(expected_type, list) else [expected_type]
+    if expected_type and not any(type_matches.get(item, False) for item in allowed_types):
+        raise ValueError("{} must be {}".format(path, " or ".join(allowed_types)))
     if isinstance(value, dict):
         required = set(schema.get("required", []))
         missing = required.difference(value)

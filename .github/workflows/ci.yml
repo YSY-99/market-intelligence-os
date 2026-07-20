@@ -28,6 +28,11 @@ jobs:
         run: python scripts/check_repository.py
       - name: Smoke-test installed command
         run: market-intel search "subscription retention" --limit 1 --json
+      - name: Install and smoke-test official MCP SDK
+        if: matrix.python-version != '3.9'
+        run: |
+          python -m pip install "mcp==1.28.1"
+          python tests/mcp_protocol_smoke.py
       - name: Build wheel
         run: python -m pip wheel --no-deps --no-build-isolation --wheel-dir dist .
       - name: Smoke-test wheel outside checkout
@@ -37,4 +42,5 @@ jobs:
           /tmp/market-intel-wheel-test/bin/python -m pip install --no-deps dist/*.whl
           cd /tmp
           /tmp/market-intel-wheel-test/bin/market-intel search "subscription retention" --limit 1 --json
-          /tmp/market-intel-wheel-test/bin/python -c "import market_intel; assert len(market_intel.load_default_knowledge_base()) == 213"
+          /tmp/market-intel-wheel-test/bin/python -c "import market_intel; assert market_intel.__version__ == '0.2.0'; assert len(market_intel.load_default_knowledge_base()) == 213"
+          test -x /tmp/market-intel-wheel-test/bin/market-intel-mcp

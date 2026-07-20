@@ -4,6 +4,8 @@ Market Intelligence OS will evolve from a source router into a complete, evidenc
 
 ## v0.2 — Read-only MCP
 
+Status: implemented on the `codex/mcp-research-foundation` release branch; awaiting release acceptance.
+
 - `search_sources`
 - `get_source`
 - `list_intents`
