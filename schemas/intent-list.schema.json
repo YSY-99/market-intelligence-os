@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:market-intelligence-os:schema:intent-list:0.1",
+  "title": "Routing Intent List Response",
+  "type": "object",
+  "required": ["api_version", "total", "intents"],
+  "properties": {
+    "api_version": {"const": "0.1"},
+    "total": {"type": "integer", "minimum": 0},
+    "intents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "topics", "decision_types", "query_terms"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "topics": {"type": "array", "items": {"type": "string"}},
+          "decision_types": {"type": "array", "items": {"type": "string"}},
+          "query_terms": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

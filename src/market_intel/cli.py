@@ -4,9 +4,9 @@ import sys
 from pathlib import Path
 from typing import List, Optional
 
-from .ingest import load_taxonomy, repository_file
+from .catalog import Catalog
+from .ingest import repository_file
 from .router import load_knowledge_base
-from .service import search_catalog
 
 
 DEFAULT_KB = repository_file("data", "sources.json")
@@ -67,11 +67,12 @@ def _print_search(query: str, results: List[dict], detected_geographies=None) ->
 def main(argv: Optional[List[str]] = None) -> int:
     args = _parser().parse_args(argv)
     if args.command == "intents":
-        for category in load_taxonomy():
-            print(category)
+        for category in Catalog().list_intents()["intents"]:
+            print(category["name"])
         return 0
     try:
         sources = load_knowledge_base(args.kb)
+        catalog = Catalog(sources)
     except (OSError, ValueError, json.JSONDecodeError) as error:
         print("Cannot load knowledge base: {}".format(error), file=sys.stderr)
         return 2
@@ -86,7 +87,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         print("--limit must be a positive integer", file=sys.stderr)
         return 2
     try:
-        payload = search_catalog(args.query, sources, limit=args.limit, free_only=args.free_only)
+        payload = catalog.search(args.query, limit=args.limit, free_only=args.free_only)
     except ValueError as error:
         print(str(error), file=sys.stderr)
         return 2

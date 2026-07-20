@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this project, cite the software and the exact catalog revision."
 title: "Market Intelligence OS"
 type: software
-version: 0.1.0
+version: 0.2.0
 date-released: 2026-07-20
 authors:
   - name: "Market Intelligence OS contributors"

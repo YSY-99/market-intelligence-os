@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import os
+import configparser
 import hashlib
 import json
+import re
 import subprocess
 import sys
 import tempfile
@@ -31,6 +33,27 @@ def run(*args: str) -> None:
 
 
 def main() -> int:
+    pyproject = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
+    pyproject_version_match = re.search(r'^version = "([^"]+)"$', pyproject, re.MULTILINE)
+    if not pyproject_version_match:
+        raise SystemExit("Cannot find project version in pyproject.toml")
+    setup_config = configparser.ConfigParser()
+    setup_config.read(str(ROOT / "setup.cfg"), encoding="utf-8")
+    package_version = pyproject_version_match.group(1)
+    from market_intel import __version__
+    citation_version_match = re.search(
+        r"^version: ([^\s]+)$",
+        (ROOT / "CITATION.cff").read_text(encoding="utf-8"),
+        re.MULTILINE,
+    )
+    versions = {
+        "pyproject.toml": package_version,
+        "setup.cfg": setup_config["metadata"]["version"],
+        "market_intel.__version__": __version__,
+        "CITATION.cff": citation_version_match.group(1) if citation_version_match else "missing",
+    }
+    if len(set(versions.values())) != 1:
+        raise SystemExit("Package version metadata is inconsistent: {}".format(versions))
     with (ROOT / "config" / "seed_catalog_hashes.json").open(encoding="utf-8") as handle:
         seed_hashes = json.load(handle)
     if set(seed_hashes) != EXPECTED_SEED_CATALOGS:

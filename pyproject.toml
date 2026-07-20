@@ -4,12 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "market-intelligence-os"
-version = "0.1.0"
+version = "0.2.0"
 description = "Explainable routing from business research questions to trusted public sources"
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [{name = "Market Intelligence OS contributors"}]
-license = {text = "Apache-2.0"}
+license = "Apache-2.0"
+license-files = ["LICENSE"]
 keywords = ["market-intelligence", "research", "open-data", "ai-agents", "routing"]
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -27,6 +28,9 @@ classifiers = [
 ]
 dependencies = []
 
+[project.optional-dependencies]
+mcp = ["mcp==1.28.1; python_version >= '3.10'"]
+
 [project.urls]
 Homepage = "https://github.com/YSY-99/market-intelligence-os"
 Repository = "https://github.com/YSY-99/market-intelligence-os"
@@ -35,6 +39,7 @@ Changelog = "https://github.com/YSY-99/market-intelligence-os/blob/main/CHANGELO
 
 [project.scripts]
 market-intel = "market_intel.cli:main"
+market-intel-mcp = "market_intel.mcp_server:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -47,4 +52,11 @@ where = ["src"]
   "config/geography_regions.json",
   "config/place_geographies.json",
   "config/taxonomy.json",
+]
+"share/market-intelligence-os/schemas" = [
+  "schemas/source.schema.json",
+  "schemas/search-response.schema.json",
+  "schemas/source-lookup.schema.json",
+  "schemas/intent-list.schema.json",
+  "schemas/coverage.schema.json",
 ]

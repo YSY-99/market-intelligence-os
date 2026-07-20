@@ -5,7 +5,7 @@ import market_intel
 
 class PublicApiTests(unittest.TestCase):
     def test_version_and_default_catalog(self):
-        self.assertEqual(market_intel.__version__, "0.1.0")
+        self.assertEqual(market_intel.__version__, "0.2.0")
         self.assertGreater(len(market_intel.load_default_knowledge_base()), 200)
 
     def test_search_sources(self):

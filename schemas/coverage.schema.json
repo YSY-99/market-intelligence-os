@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:market-intelligence-os:schema:coverage:0.1",
+  "title": "Catalog Coverage Response",
+  "type": "object",
+  "required": ["api_version", "total_sources", "categories", "geographies", "access_models", "connector_statuses", "verification_statuses"],
+  "properties": {
+    "api_version": {"const": "0.1"},
+    "total_sources": {"type": "integer", "minimum": 0},
+    "categories": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "geographies": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "access_models": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "connector_statuses": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "verification_statuses": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}}
+  },
+  "additionalProperties": false
+}
