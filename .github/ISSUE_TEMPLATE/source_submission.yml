@@ -1,0 +1,54 @@
+name: Propose a source
+description: Suggest a public or analytical source for editorial review
+title: "[Source]: "
+labels: ["source-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include secrets or personal data. A proposal never enters production without editorial review."
+  - type: input
+    id: publisher
+    attributes:
+      label: Source and publisher
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Official URL
+    validations:
+      required: true
+  - type: dropdown
+    id: origin
+    attributes:
+      label: Data origin
+      options: [primary, secondary, user_generated, owned]
+    validations:
+      required: true
+  - type: textarea
+    id: use
+    attributes:
+      label: Best use cases and supported decisions
+    validations:
+      required: true
+  - type: textarea
+    id: coverage
+    attributes:
+      label: Geography, language, time coverage, and limitations
+    validations:
+      required: true
+  - type: textarea
+    id: rights
+    attributes:
+      label: License, API, scraping, privacy, and redistribution terms
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmation
+      options:
+        - label: I checked that this source is not already present.
+          required: true
+        - label: I have not included credentials, private data, or copied report content.
+          required: true

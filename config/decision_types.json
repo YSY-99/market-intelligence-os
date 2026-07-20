@@ -1,0 +1,18 @@
+{
+  "market_selection": ["choose market", "market opportunity", "выбор рынка", "перспективный рынок"],
+  "problem_discovery": ["customer problem", "pain point", "unmet need", "проблема клиента", "боль клиента"],
+  "customer_research": ["customer research", "customer review", "customer complaint", "исследование клиентов", "отзывы клиентов", "жалобы клиентов"],
+  "competitor_analysis": ["competitor", "competitive", "competition", "конкурент", "конкуренты"],
+  "market_sizing": ["market size", "tam", "number of businesses", "размер рынка", "число компаний", "объем рынка"],
+  "pricing": ["pricing", "price benchmark", "willingness to pay", "цена", "ценообразование", "готовность платить"],
+  "unit_economics": ["unit economics", "cac", "ltv", "margin", "стоимость привлечения", "юнит экономика", "маржа"],
+  "product_validation": ["product validation", "feature request", "product review", "проверка продукта", "запрос функции"],
+  "channel_selection": ["marketing channel", "acquisition channel", "канал привлечения", "канал продаж"],
+  "sales_intelligence": ["sales lead", "buyer discovery", "prospect", "лиды", "поиск покупателей", "клиенты b2b"],
+  "regulatory_risk": ["regulation", "compliance", "license requirement", "sanctions", "регулирование", "нормативные требования", "лицензия", "санкции"],
+  "technology_validation": ["technology validation", "patent landscape", "scientific evidence", "проверка технологии", "патентный ландшафт"],
+  "fundraising": ["fundraising", "investor", "venture funding", "инвестор", "фандрайзинг", "венчурные инвестиции"],
+  "procurement": ["procurement", "tender", "government contract", "госзакупки", "тендер", "государственный контракт"],
+  "geographic_expansion": ["expand to", "country expansion", "location selection", "выход на рынок", "географическая экспансия", "выбор локации"],
+  "growth": ["growth", "retention", "conversion", "рост", "удержание", "конверсия"]
+}

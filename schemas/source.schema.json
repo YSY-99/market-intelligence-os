@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:market-intelligence-os:schema:source:1.0",
+  "title": "Market Intelligence Source",
+  "type": "object",
+  "required": [
+    "schema_version", "id", "company", "category", "description", "best_for",
+    "topics", "keywords", "access", "urls", "authority_score", "data_origin",
+    "decision_types", "geographies", "integration", "verification", "contribution"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "company": {"type": "string", "minLength": 1},
+    "category": {"type": "string", "minLength": 1},
+    "description": {"type": "string", "minLength": 1},
+    "best_for": {"type": "array", "items": {"type": "string"}},
+    "topics": {"type": "array", "items": {"type": "string"}},
+    "keywords": {"type": "array", "items": {"type": "string"}},
+    "authority_score": {"type": "number", "minimum": 0, "maximum": 10},
+    "data_origin": {"enum": ["primary", "secondary", "user_generated", "owned", "unspecified"]},
+    "decision_types": {"type": "array", "items": {"type": "string"}},
+    "geographies": {"type": "array", "items": {"type": "string"}},
+    "access": {
+      "type": "object",
+      "required": ["raw", "free", "paid", "gated"],
+      "properties": {
+        "raw": {"type": "string"},
+        "free": {"type": "boolean"},
+        "paid": {"type": "boolean"},
+        "gated": {"type": "boolean"}
+      }
+    },
+    "urls": {
+      "type": "object",
+      "required": ["website", "research", "blog"],
+      "properties": {
+        "website": {"type": "string", "format": "uri"},
+        "research": {"type": "string", "format": "uri"},
+        "blog": {"type": "string", "format": "uri"}
+      }
+    },
+    "integration": {
+      "type": "object",
+      "required": ["connector_status"],
+      "properties": {"connector_status": {"type": "string", "minLength": 1}}
+    },
+    "verification": {
+      "type": "object",
+      "required": ["status", "metadata_checked_at"],
+      "properties": {
+        "status": {"type": "string", "minLength": 1},
+        "metadata_checked_at": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"}
+      }
+    },
+    "contribution": {
+      "type": "object",
+      "required": ["status", "provenance_url"],
+      "properties": {
+        "status": {"type": "string", "minLength": 1},
+        "provenance_url": {"type": "string", "format": "uri"}
+      }
+    }
+  },
+  "additionalProperties": true
+}

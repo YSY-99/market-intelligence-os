@@ -1,0 +1,9 @@
+* @YSY-99
+/catalog/ @YSY-99
+/config/ @YSY-99
+/schemas/ @YSY-99
+/.github/workflows/ @YSY-99
+/src/market_intel/ingest.py @YSY-99
+/src/market_intel/submission.py @YSY-99
+/SECURITY.md @YSY-99
+/GOVERNANCE.md @YSY-99

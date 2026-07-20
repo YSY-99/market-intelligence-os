@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:market-intelligence-os:schema:search-response:0.1",
+  "title": "Market Intelligence CLI Search Response",
+  "type": "object",
+  "required": ["api_version", "kb_schema_version", "ranking_version", "query", "detected_intents", "detected_decisions", "detected_geographies", "coverage_gap", "warnings", "results"],
+  "properties": {
+    "api_version": {"const": "0.1"},
+    "kb_schema_version": {"const": "1.0"},
+    "ranking_version": {"const": "lexical-v1"},
+    "query": {"type": "string", "minLength": 1},
+    "detected_intents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "matched_terms", "strength", "routing_topics"]
+      }
+    },
+    "detected_decisions": {"type": "array", "items": {"type": "string"}},
+    "detected_geographies": {"type": "array", "items": {"type": "string"}},
+    "coverage_gap": {"type": "boolean"},
+    "warnings": {"type": "array", "items": {"type": "string"}},
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "score", "score_breakdown", "recommended_url", "caveats"],
+        "properties": {
+          "source": {"$ref": "source.schema.json"},
+          "score": {"type": "number"},
+          "score_breakdown": {"type": "object", "additionalProperties": {"type": "number"}},
+          "recommended_url": {"type": "string", "format": "uri"},
+          "caveats": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

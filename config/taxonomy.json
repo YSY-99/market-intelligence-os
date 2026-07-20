@@ -1,0 +1,243 @@
+{
+  "Subscription & Web2App": {
+    "topics": ["subscriptions", "paywall", "pricing", "retention", "trial", "ltv", "churn", "renewal", "web2app", "conversion"],
+    "decision_types": ["pricing", "unit_economics", "product_validation", "growth"],
+    "query_terms": ["subscription", "subscriptions", "paywall", "web2app", "in-app purchase", "retention", "churn", "подписка", "подписки", "подписок", "мобильных подписок", "пейвол", "удержание", "удержания", "конверсия подписки", "конверсии подписок"]
+  },
+  "Mobile Growth & Attribution": {
+    "topics": ["mobile growth", "attribution", "acquisition", "deep linking", "remarketing", "campaign performance"],
+    "decision_types": ["channel_selection", "growth", "unit_economics"],
+    "query_terms": ["mobile attribution", "app attribution", "mobile growth", "deep link", "remarketing", "атрибуция", "мобильный маркетинг", "привлечение пользователей"]
+  },
+  "App Intelligence & ASO": {
+    "topics": ["app intelligence", "aso", "downloads", "revenue", "rankings", "keywords", "app market share"],
+    "decision_types": ["competitor_analysis", "market_sizing", "channel_selection"],
+    "query_terms": ["app intelligence", "app store", "aso", "app downloads", "app revenue", "mobile market", "рынок приложений", "загрузки приложений", "доход приложений", "aso"]
+  },
+  "Advertising & Creative Intelligence": {
+    "topics": ["advertising", "ad creative", "media spend", "campaigns", "creative testing", "ad transparency"],
+    "decision_types": ["competitor_analysis", "channel_selection", "growth"],
+    "query_terms": ["ad creative", "advertising", "ad spend", "campaign creative", "competitor ads", "реклама", "рекламные креативы", "реклама конкурентов", "медиаспенд"]
+  },
+  "Web & Competitive Intelligence": {
+    "topics": ["website traffic", "competitors", "market share", "technology stack", "seo", "audience"],
+    "decision_types": ["competitor_analysis", "market_sizing", "channel_selection"],
+    "query_terms": ["website traffic", "competitor traffic", "competitive intelligence", "market share", "tech stack", "web analytics", "трафик сайта", "трафик конкурента", "конкурент", "доля рынка", "технологический стек"]
+  },
+  "Product & Customer Intelligence": {
+    "topics": ["product analytics", "customer research", "reviews", "user behavior", "product discovery", "experimentation"],
+    "decision_types": ["problem_discovery", "customer_research", "product_validation"],
+    "query_terms": ["product analytics", "customer research", "user behavior", "product discovery", "customer reviews", "продуктовая аналитика", "поведение пользователей", "исследование клиентов", "отзывы"]
+  },
+  "SaaS & B2B Benchmarks": {
+    "topics": ["saas", "b2b", "arr", "mrr", "retention", "churn", "sales", "pricing", "benchmarks"],
+    "decision_types": ["pricing", "unit_economics", "sales_intelligence", "growth"],
+    "query_terms": ["saas benchmark", "b2b benchmark", "arr", "mrr", "net revenue retention", "saas churn", "sales benchmark", "метрики saas", "b2b бенчмарк", "выручка saas"]
+  },
+  "Ecommerce & Payments": {
+    "topics": ["ecommerce", "payments", "checkout", "conversion", "retail", "consumer spending"],
+    "decision_types": ["market_sizing", "pricing", "unit_economics", "growth"],
+    "query_terms": ["ecommerce", "payments", "checkout", "retail sales", "online shopping", "электронная коммерция", "платежи", "чекаут", "ритейл", "онлайн-покупки"]
+  },
+  "Trends & Market Research": {
+    "topics": ["trends", "market research", "consumer trends", "demand", "forecasting", "signals"],
+    "decision_types": ["market_selection", "problem_discovery", "market_sizing"],
+    "query_terms": ["market trend", "consumer trend", "emerging trend", "demand trend", "trend forecast", "тренды рынка", "потребительские тренды", "новые тренды", "прогноз трендов"]
+  },
+  "Media & Consumer Behavior": {
+    "topics": ["media", "consumer behavior", "attention", "audience", "culture", "search behavior"],
+    "decision_types": ["customer_research", "channel_selection", "product_validation"],
+    "query_terms": ["consumer behavior", "media consumption", "audience behavior", "search behavior", "consumer attention", "поведение потребителей", "медиапотребление", "поисковое поведение", "аудитория"]
+  },
+  "Startup & Venture Intelligence": {
+    "topics": ["startups", "funding", "venture capital", "investors", "company discovery", "startup ideas"],
+    "decision_types": ["market_selection", "competitor_analysis", "fundraising"],
+    "query_terms": ["startup database", "startup idea", "funding round", "venture funding", "investor", "стартап", "инвестиционный раунд", "венчурные инвестиции", "инвестор", "идея стартапа"]
+  },
+  "VC & Strategy Research": {
+    "topics": ["venture capital", "strategy", "investment thesis", "market maps", "technology trends", "startups"],
+    "decision_types": ["market_selection", "competitor_analysis", "fundraising"],
+    "query_terms": ["vc research", "investment", "investing", "investment thesis", "market map", "venture capital", "strategy research", "инвестиции", "венчурный рынок", "инвестиционный тезис", "карта рынка", "стратегия"]
+  },
+  "AI & Technology Research": {
+    "topics": ["artificial intelligence", "ai adoption", "machine learning", "technology", "models", "compute", "ai investment"],
+    "decision_types": ["market_selection", "technology_validation", "competitor_analysis"],
+    "query_terms": ["ai", "artificial intelligence", "ai trend", "ai adoption", "machine learning", "foundation model", "generative ai", "искусственный интеллект", "ии", "тренды ии", "внедрение ии", "генеративный ии", "машинное обучение"]
+  },
+  "Consulting & Macro Research": {
+    "topics": ["macroeconomics", "industry research", "strategy", "forecast", "economic indicators", "global markets"],
+    "decision_types": ["market_selection", "market_sizing", "geographic_expansion"],
+    "query_terms": ["macro research", "economic outlook", "industry outlook", "market forecast", "consulting report", "макроэкономика", "экономический прогноз", "отраслевой прогноз", "консалтинговый отчет"]
+  },
+  "Research & Open Data": {
+    "topics": ["open data", "academic research", "statistics", "datasets", "public data", "surveys"],
+    "decision_types": ["market_sizing", "problem_discovery", "technology_validation"],
+    "query_terms": ["open data", "public dataset", "academic research", "official statistics", "survey data", "открытые данные", "публичные данные", "официальная статистика", "научное исследование", "датасет"]
+  },
+  "Corporate & Financial Filings": {
+    "topics": ["company filings", "financial statements", "revenue", "ownership", "directors", "annual reports", "legal entities"],
+    "decision_types": ["competitor_analysis", "market_sizing", "sales_intelligence", "fundraising"],
+    "concept_aliases": {
+      "company filings": ["company filing", "10-k", "10-q", "отчетность компании"],
+      "financial statements": ["financial statement", "revenue", "финансовая отчетность", "выручка"],
+      "ownership": ["ownership", "owner", "владельцы", "собственники"],
+      "legal entities": ["company registry", "corporate registry", "реестр компаний", "юридические лица"]
+    },
+    "query_terms": ["company filing", "financial statement", "annual report", "10-k", "10-q", "company ownership", "corporate registry", "отчетность компании", "финансовая отчетность", "владельцы компании", "реестр компаний", "выручка конкурента"]
+  },
+  "Government & Business Statistics": {
+    "topics": ["business demography", "establishments", "employment", "wages", "industry output", "business formation", "official statistics"],
+    "decision_types": ["market_selection", "market_sizing", "geographic_expansion", "unit_economics"],
+    "concept_aliases": {
+      "business demography": ["business demography", "business formation", "демография бизнеса"],
+      "establishments": ["number of businesses", "establishment count", "число компаний"],
+      "employment": ["industry employment", "занятость по отрасли"],
+      "wages": ["industry wages", "salary statistics", "зарплаты по профессии"],
+      "industry output": ["industry output", "economic census", "размер отрасли"]
+    },
+    "query_terms": ["business demography", "number of businesses", "industry employment", "industry wages", "business formation", "economic census", "official business statistics", "число компаний", "демография бизнеса", "занятость по отрасли", "зарплаты по профессии", "размер отрасли"]
+  },
+  "Procurement & Public Spending": {
+    "topics": ["public procurement", "government contracts", "tenders", "contract awards", "buyers", "suppliers", "public spending"],
+    "decision_types": ["market_sizing", "sales_intelligence", "procurement", "geographic_expansion"],
+    "concept_aliases": {
+      "public procurement": ["public procurement", "госзакупки"],
+      "government contracts": ["government contract", "государственный контракт"],
+      "tenders": ["tender", "тендер"],
+      "contract awards": ["contract award", "победитель тендера"],
+      "public spending": ["public spending", "бюджет закупки"]
+    },
+    "query_terms": ["government contract", "public procurement", "tender", "contract award", "government buyer", "public spending", "госзакупки", "государственный контракт", "тендер", "победитель тендера", "бюджет закупки"]
+  },
+  "Patents & Scientific Research": {
+    "topics": ["patents", "patent applications", "scientific papers", "clinical trials", "research grants", "technology landscape"],
+    "decision_types": ["technology_validation", "competitor_analysis", "problem_discovery", "market_selection"],
+    "concept_aliases": {
+      "patents": ["patent", "патент", "патенты"],
+      "patent applications": ["patent application", "патентная заявка"],
+      "scientific papers": ["scientific paper", "research literature", "научная статья", "научные публикации"],
+      "clinical trials": ["clinical trial", "клиническое исследование"]
+    },
+    "query_terms": ["patent", "patent application", "scientific paper", "clinical trial", "research literature", "technology landscape", "патент", "патентная заявка", "научная статья", "клиническое исследование", "научные публикации"]
+  },
+  "Trade & Supply Chain": {
+    "topics": ["imports", "exports", "trade flows", "suppliers", "shipments", "products", "supply chain"],
+    "decision_types": ["market_sizing", "geographic_expansion", "competitor_analysis", "unit_economics"],
+    "concept_aliases": {
+      "imports": ["import", "импорт"],
+      "exports": ["export", "экспорт"],
+      "trade flows": ["trade flow", "торговые потоки", "таможенная статистика"],
+      "suppliers": ["supplier", "поставщики"],
+      "shipments": ["shipment", "поставки"],
+      "supply chain": ["supply chain", "цепочка поставок"]
+    },
+    "query_terms": ["import data", "export data", "trade flow", "supplier shipment", "supply chain", "customs data", "импорт", "экспорт", "торговые потоки", "поставщики", "цепочка поставок", "таможенная статистика"]
+  },
+  "Customer Voice & Reviews": {
+    "topics": ["customer reviews", "complaints", "feature requests", "ratings", "community discussions", "customer language"],
+    "decision_types": ["problem_discovery", "customer_research", "product_validation", "competitor_analysis"],
+    "concept_aliases": {
+      "customer reviews": ["customer review", "user review", "отзывы клиентов"],
+      "complaints": ["customer complaint", "жалобы клиентов"],
+      "feature requests": ["feature request", "запрос функции"],
+      "ratings": ["product rating", "оценки приложения"],
+      "community discussions": ["community discussion", "обсуждения пользователей"]
+    },
+    "query_terms": ["customer review", "user review", "customer complaint", "feature request", "product rating", "community discussion", "отзывы клиентов", "жалобы клиентов", "оценки приложения", "обсуждения пользователей", "проблемы клиентов"]
+  },
+  "Regulation & Compliance": {
+    "topics": ["regulations", "laws", "licenses", "sanctions", "product safety", "recalls", "regulatory filings"],
+    "decision_types": ["regulatory_risk", "market_selection", "geographic_expansion", "product_validation"],
+    "concept_aliases": {
+      "regulations": ["regulation", "regulatory rule", "compliance", "gdpr", "регулирование", "нормативные требования"],
+      "licenses": ["license requirement", "требования лицензии", "лицензия"],
+      "sanctions": ["sanctions", "sanctions list", "санкции", "санкционный список"],
+      "product safety": ["product safety", "безопасность продукции"],
+      "recalls": ["product recall", "отзыв продукции"]
+    },
+    "query_terms": ["regulation", "compliance", "gdpr", "license requirement", "sanctions", "sanctions list", "product recall", "regulatory rule", "регулирование", "требования лицензии", "санкции", "санкционный список", "отзыв продукции", "нормативные требования"]
+  },
+  "Jobs & Talent Intelligence": {
+    "topics": ["jobs", "skills", "wages", "hiring", "occupations", "talent supply", "competitor vacancies"],
+    "decision_types": ["unit_economics", "competitor_analysis", "geographic_expansion", "technology_validation"],
+    "concept_aliases": {
+      "jobs": ["job posting", "vacancy", "вакансия", "вакансии"],
+      "skills": ["skills demand", "спрос на навыки"],
+      "wages": ["salary data", "wage", "зарплаты специалистов"],
+      "hiring": ["hiring trend", "competitor jobs", "найм", "вакансии конкурента"],
+      "talent supply": ["talent market", "рынок труда"]
+    },
+    "query_terms": ["salary data", "job postings", "hiring trend", "skills demand", "talent market", "competitor jobs", "зарплаты специалистов", "вакансии конкурента", "рынок труда", "спрос на навыки", "найм"]
+  },
+  "Local & Geospatial Intelligence": {
+    "topics": ["locations", "points of interest", "local businesses", "maps", "foot traffic", "neighborhoods", "geospatial data"],
+    "decision_types": ["market_sizing", "geographic_expansion", "competitor_analysis", "channel_selection"],
+    "concept_aliases": {
+      "locations": ["store location", "location selection", "выбор локации"],
+      "points of interest": ["points of interest", "точки продаж"],
+      "local businesses": ["local business", "local competitors", "локальный бизнес", "местные конкуренты"],
+      "geospatial data": ["geospatial data", "геоданные"]
+    },
+    "query_terms": ["local business", "points of interest", "store locations", "geospatial data", "neighborhood demand", "local competitors", "локальный бизнес", "точки продаж", "геоданные", "местные конкуренты", "выбор локации"]
+  },
+  "Tax Incentives & Grants": {
+    "topics": ["taxes", "tax rates", "tax credits", "incentives", "grants", "subsidies", "funding programs"],
+    "decision_types": ["market_selection", "unit_economics", "fundraising", "geographic_expansion", "regulatory_risk"],
+    "query_terms": ["business tax", "tax rate", "tax credit", "business incentive", "grant program", "subsidy", "налоги для бизнеса", "налоговая ставка", "налоговые льготы", "грант", "субсидия", "финансирование бизнеса"]
+  },
+  "Trademarks Designs & Copyright": {
+    "topics": ["trademarks", "brand names", "industrial designs", "copyright", "domain disputes", "rights holders"],
+    "decision_types": ["technology_validation", "competitor_analysis", "regulatory_risk", "geographic_expansion"],
+    "query_terms": ["trademark search", "brand registration", "industrial design", "copyright registry", "товарный знак", "регистрация бренда", "промышленный образец", "авторское право"]
+  },
+  "Standards & Certification": {
+    "topics": ["standards", "certification", "conformity assessment", "technical requirements", "accreditation", "product testing"],
+    "decision_types": ["regulatory_risk", "product_validation", "technology_validation", "geographic_expansion"],
+    "query_terms": ["industry standard", "product certification", "conformity assessment", "technical standard", "accreditation", "стандарт отрасли", "сертификация продукции", "оценка соответствия", "технический стандарт", "аккредитация"]
+  },
+  "Climate & Environmental Data": {
+    "topics": ["climate", "weather", "natural hazards", "emissions", "air quality", "environment", "carbon"],
+    "decision_types": ["market_selection", "geographic_expansion", "regulatory_risk", "unit_economics"],
+    "query_terms": ["climate data", "weather risk", "natural hazard", "emissions data", "air quality", "carbon emissions", "климатические данные", "погодный риск", "природные риски", "выбросы", "качество воздуха"]
+  },
+  "Energy & Commodity Intelligence": {
+    "topics": ["energy prices", "electricity", "oil", "gas", "commodities", "fuel", "energy demand"],
+    "decision_types": ["unit_economics", "market_selection", "market_sizing", "geographic_expansion"],
+    "query_terms": ["energy price", "electricity price", "oil price", "gas price", "commodity price", "energy demand", "цены на энергию", "цена электричества", "цена нефти", "цена газа", "сырьевые товары"]
+  },
+  "Real Estate & Foot Traffic": {
+    "topics": ["commercial real estate", "rents", "vacancy", "building permits", "property prices", "foot traffic", "store visits"],
+    "decision_types": ["geographic_expansion", "unit_economics", "market_sizing", "competitor_analysis"],
+    "query_terms": ["commercial rent", "retail rent", "property price", "building permit", "foot traffic", "store visits", "коммерческая аренда", "стоимость аренды", "разрешения на строительство", "пешеходный трафик", "посещаемость магазинов"]
+  },
+  "Logistics Freight & Ports": {
+    "topics": ["freight", "shipping rates", "ports", "vessels", "logistics performance", "delivery times", "transport capacity"],
+    "decision_types": ["unit_economics", "geographic_expansion", "market_sizing", "competitor_analysis"],
+    "query_terms": ["freight rate", "shipping cost", "port traffic", "vessel data", "logistics performance", "delivery time", "стоимость доставки", "фрахт", "портовый трафик", "логистика", "срок доставки"]
+  },
+  "Demographics Population & Migration": {
+    "topics": ["population", "households", "income", "age", "migration", "urbanization", "consumer demographics"],
+    "decision_types": ["market_sizing", "geographic_expansion", "market_selection", "customer_research"],
+    "query_terms": ["population data", "household income", "migration data", "age demographics", "urbanization", "население", "доход домохозяйств", "миграция", "возрастная структура", "урбанизация"]
+  },
+  "Sector Regulators & Industry Data": {
+    "topics": ["banking", "insurance", "telecom", "healthcare", "food", "agriculture", "manufacturing", "sector regulation"],
+    "decision_types": ["regulatory_risk", "market_sizing", "competitor_analysis", "geographic_expansion"],
+    "query_terms": ["banking regulator", "insurance regulator", "telecom data", "health statistics", "food statistics", "agriculture data", "industry regulator", "банковский регулятор", "страховой регулятор", "телеком данные", "статистика здравоохранения", "сельское хозяйство", "отраслевой регулятор"]
+  },
+  "B2B Sales & Prospect Intelligence": {
+    "topics": ["companies", "prospects", "buyers", "contacts", "technographics", "firmographics", "sales signals"],
+    "decision_types": ["sales_intelligence", "market_sizing", "competitor_analysis", "channel_selection"],
+    "query_terms": ["b2b prospects", "company contacts", "buyer list", "firmographic data", "sales intelligence", "technographic data", "b2b лиды", "контакты компаний", "список покупателей", "данные о компаниях", "sales intelligence"]
+  },
+  "Credit Fraud & Cyber Risk": {
+    "topics": ["credit risk", "fraud", "cybersecurity", "vulnerabilities", "breaches", "threats", "business failures"],
+    "decision_types": ["regulatory_risk", "technology_validation", "sales_intelligence", "competitor_analysis"],
+    "query_terms": ["credit risk", "business failure", "fraud data", "cyber incident", "security vulnerability", "data breach", "кредитный риск", "банкротство компании", "мошенничество", "киберинцидент", "уязвимость", "утечка данных"]
+  },
+  "Pricing & Willingness to Pay": {
+    "topics": ["prices", "price indexes", "willingness to pay", "cost of living", "purchasing power", "price elasticity"],
+    "decision_types": ["pricing", "unit_economics", "market_sizing", "geographic_expansion"],
+    "query_terms": ["willingness to pay", "price benchmark", "consumer prices", "cost of living", "purchasing power", "price elasticity", "готовность платить", "сравнение цен", "потребительские цены", "стоимость жизни", "покупательная способность"]
+  }
+}

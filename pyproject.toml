@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "market-intelligence-os"
+version = "0.1.0"
+description = "Explainable routing from business research questions to trusted public sources"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name = "Market Intelligence OS contributors"}]
+license = {text = "Apache-2.0"}
+keywords = ["market-intelligence", "research", "open-data", "ai-agents", "routing"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/YSY-99/market-intelligence-os"
+Repository = "https://github.com/YSY-99/market-intelligence-os"
+Issues = "https://github.com/YSY-99/market-intelligence-os/issues"
+Changelog = "https://github.com/YSY-99/market-intelligence-os/blob/main/CHANGELOG.md"
+
+[project.scripts]
+market-intel = "market_intel.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.data-files]
+"share/market-intelligence-os/data" = ["data/sources.json", "data/sources.jsonl"]
+"share/market-intelligence-os/config" = [
+  "config/decision_types.json",
+  "config/geographies.json",
+  "config/geography_regions.json",
+  "config/place_geographies.json",
+  "config/taxonomy.json",
+]
